@@ -1,0 +1,175 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+ *,*::before
+*::after{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 10px;
+   
+    background-color: #f1f5f9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.logo{
+    font-size: 20px;
+    font-weight: 500;
+ 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    padding-top: 20px;
+    align-self: start;
+}
+.welcome{
+       color: #374151;
+       display: flex;
+       flex-direction: column;
+       font-size: 14px;
+       line-height:16px ;
+       padding: 0px 2px;
+       margin-bottom: 25px;
+}
+.container{
+width: fit-content;
+}
+.dtr{
+      line-height:18px ;
+}
+.tr{
+    font-weight: 500;
+    color:#22c55e;
+}
+.ti{
+    color:#ef4444;
+}
+.trh{
+    color:#f59e0b ;
+}
+.atp{
+    color:#0284c7;
+}
+.formdiv{
+    background-color: #eaeff8;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px 25px 15px 25px ;
+    justify-content: center;
+}
+.frinp{
+    width: 100%;
+}
+
+.label{
+    font-size: 14px;
+    display: block;
+  color: #4a4a4a;
+  font-weight: 600;
+  font-size: 0.875rem; /* Text-sm */
+  margin-bottom: 0.5rem; /* mt-2 */
+
+}
+.inputfield{
+  display: block;
+  width: 90%; /* w-56 */
+  padding:10px ; /* py-1.5 px-2 */
+  border-radius: 6px; /* rounded-md */
+  border: 1px solid #c0c0c0; /* ring-1 ring-inset ring-gray-400 */
+  box-shadow: inset 0 0 0 1px #c0c0c0; /* ring-inset equivalent */
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 0.875rem; /* Matching the text size */
+  transition: border-color 0.1s ease-in-out;
+  margin-bottom: 5px;
+}
+.inputfield:focus{
+ border-color: #596A95;
+ color: #333333; /* text-gray-800 equivalent */
+ /* Similar to focus color for text-gray-800 */
+  outline: none;
+}
+.inputfield::placeholder{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    padding: 2px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.forml{
+    padding: 15px 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+.loginbutton {
+ width:100%;
+ height: 3em;
+ border-radius: 5px;
+ font-size: 15px;
+  color: #4a4a4a;
+ font-family: inherit;
+ border: none;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+ cursor: pointer;
+
+}
+
+.loginbutton::before {
+ content: '';
+ width: 0;
+ height: 3em;
+ border-radius: 5px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+
+.loginbutton:hover::before {
+ width:100%;
+}
+.fg{
+    font-size: small;
+    width: 100%;
+    display: flex ;
+    gap: 2px;
+    justify-content: center;
+    color: #4a4a4a;
+}
+
+p > a{
+    color: #0fd850;
+    text-decoration: none;
+}
