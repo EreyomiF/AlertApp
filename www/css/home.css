@@ -40,9 +40,6 @@
     border-radius:50% ;
     overflow: hidden;
 }
-.primg{
-width: 100%;
-}
 .secsections{
     position: relative;
 }
@@ -68,7 +65,7 @@ display: flex;
     background-color: transparent;
 }
 .filter-select:focus{
-    border:2px solid #0ea5e9;
+    border:2px solid #1a1b1b;
 }
 .categories{
     display: none; 
@@ -154,7 +151,7 @@ width:100%;
     cursor: pointer;
 }
 .deletebtn:hover{
-    background: #f87171;
+    background: rgb(208, 76, 32);
     opacity: 70%;
 }
 .description{
@@ -191,7 +188,7 @@ color:skyblue ;
   justify-self: end;
 }
 .location:hover{
-    color:#ef4444 ;
+    color:rgb(208, 76, 32) ;
 }
 
 .addform{
@@ -258,7 +255,7 @@ border-radius: 5px;
 .headline-input:focus{
 outline-style: solid;
 outline-width: 2px;
-outline-color: #0ea5e9;
+outline-color: #0b0c0c;
 border:1px solid transparent;
 }
 option{
@@ -294,7 +291,7 @@ margin-bottom: 30px;
 .up-btn{
     align-self: self-end;
 padding: 6px 10px;
-background-color:#fbbf24 ;
+background-color:#f1b00c ;
 color: #f8fafc;
 font-weight: 600;
 font-size: 12px;
@@ -308,7 +305,7 @@ border: none;
     width: 90%;
     padding: 8px 10px;
     font-weight: 600;
-    background-color:#f87171 ;
+    background-color:rgb(208, 76, 32) ;
 font-size: 12px;
 color: #f8fafc;
 border: none;
@@ -344,7 +341,7 @@ cursor: pointer;
     
 }
 .btn{
-background-color: #f3f4f6;
+background-color: rgb(208, 76, 32);
 padding: 8px;
 cursor: pointer;
 border-radius: 5px;
@@ -357,15 +354,9 @@ border: none;
 box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 .btn:focus{
-    outline: #0ea5e9;
+    outline: #ae8f08;
     outline-width: 2px;
     outline-style: solid;
 
 }
-@media screen and (min-width:425px) {
-    .addform{
-margin-left: 25px;
-   top: 5%;
 
-}
-}

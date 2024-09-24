@@ -1,98 +1,97 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; connect-src 'self' https://api.jsonbin.io; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
 
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-          <header>
-        <h1 class="logo">Reportera</h1>
-    </header>
-    <div class="container">
-        <div class="welcome">
-            <h2>Welcome to Reportera!</h2>
-            <div class="dtr">
-                <span class="tr">Trusted,</span>
-                <span class="ti"> Timely,</span>
-                <span class="trh">Truthful </span>
-                <span class="atp">and Thought-Provoking News.</span>
-            </div>
-        </div>
-        <div class="formdiv">
-            <div class="forml" id="loginForm">
-                <div class="frinp">
-                    <label for="email" class="label">Email</label>
-                    <input
-                        title="email"
-                        type="email"
-                        name="email"
-                        id="emails"
-                        placeholder="example@email.com"
-                        class="inputfield"
-                    />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; connect-src 'self' https://api.jsonbin.io; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="./css/signup.css">
+
+    <title>Sign In</title>
+    <style>
+        body {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-[sans-serif]">
+    <div class="min-h-screen flex flex-col items-center justify-center py-6 px-4">
+        <div class="max-w-md w-full">
+            <a href="javascript:void(0)">
+                <img src="./img/alert.png" alt="logo" class="w-40 mb-8 mx-auto block" />
+            </a>
+            <div class="welcome mb-4 text-center">
+                <h1 class="text-2xl font-bold">Welcome to AlertNOW!</h1>
+                <div class="dtr">
+                    <span class="tr text-sm">Trusted,</span>
+                    <span class="ti text-sm"> Timely,</span>
+                    <span class="trh text-sm">Truthful</span>
+                    <span class="atp text-sm">and Thought-Provoking News.</span>
                 </div>
-                <div class="frinp">
-                    <label for="Password" class="label">Password</label>
-                    <input
-                        title="password"
-                        type="password"
-                        name="password"
-                        id="passwordd"
-                        placeholder="8-10 characters"
-                        class="inputfield"
-                    />
-                </div>
-                <button
-                    title="submit button"
-                    type="submit"
-                    class="loginbutton"
-                    id="loginbtn"
-                >
-                    Sign In
-                </button>
             </div>
-            <p class="fg">
-                Don't have an account?
-                <a href="./signup.html" id="createaccount">Create one</a>
-            </p>
+            
+            <div class="p-8 rounded-2xl text-white  bg-opacity-80 shadow-lg" style="background-color: rgb(208, 76, 32);">
+                <h2 class="text-center text-2xl font-bold">Sign in</h2>
+                <form class="mt-8 space-y-4" id="loginForm">
+                    <div>
+                        <label class="text-white text-sm mb-2 block">User name</label>
+                        <div class="relative flex items-center">
+                            <input name="username" required 
+                            title="email"
+                            type="email"
+                            id="emails"
+                            class="w-full text-white text-sm border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Enter user name" />
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" class="w-4 h-4 absolute right-4" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="10" cy="7" r="6"></circle>
+                                <path d="M14 15H6a5 5 0 0 0-5 5 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 5 5 0 0 0-5-5zm8-4h-2.59l.3-.29a1 1 0 0 0-1.42-1.42l-2 2a1 1 0 0 0 0 1.42l2 2a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42l-.3-.29H22a1 1 0 0 0 0-2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-white text-sm mb-2 block" for="Password" class="label">Password</label>
+                        <div class="relative flex items-center">
+                            <input name="password" 
+                            type="password" required 
+                            title="password"
+                            id="passwordd"
+                            class="w-full text-white text-sm border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Enter password" />
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" class="w-4 h-4 absolute right-4 cursor-pointer" viewBox="0 0 128 128" aria-hidden="true">
+                                <path d="M64 104C22.127 104 1.367 67.496.504 65.943a4 4 0 0 1 0-3.887C1.367 60.504 22.127 24 64 24s62.633 36.504 63.496 38.057a4 4 0 0 1 0 3.887C126.633 67.496 105.873 104 64 104zM8.707 63.994C13.465 71.205 32.146 96 64 96c31.955 0 50.553-24.775 55.293-31.994C114.535 56.795 95.854 32 64 32 32.045 32 13.447 56.775 8.707 63.994zM64 88c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm0-40c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex items-center">
+                            <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 shrink-0 text-red-600 focus:ring-red-500 border-gray-300 rounded" />
+                            <label for="remember-me" class="ml-3 block text-sm text-white">Remember me</label>
+                        </div>
+                        <div class="text-sm">
+                            <a href="javascript:void(0);" class="text-red-400 hover:underline transition duration-300 font-semibold">Forgot your password?</a>
+                        </div>
+                    </div>
+
+                    <div class="!mt-8">
+                        <button                        
+                        title="submit button"
+                        type="submit"
+                        id="loginbtn"
+                        class="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-red-600 hover:bg-red-700 transition duration-300 focus:outline-none">Sign in</button>
+                    </div>
+                    <p class="text-white text-sm !mt-8 text-center">Don't have an account? <a href="signup.html" id="createaccount" class="text-red-400 hover:underline transition duration-300 ml-1 whitespace-nowrap font-semibold">Register here</a></p>
+                </form>
+            </div>
         </div>
     </div>
+    <script src="./js/index.js"></script>
+</body>
 
-      
-        <script src="js/index.js"></script>
-    </body>
 </html>
