@@ -5,6 +5,7 @@
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
        Ereyomi Funmilola
     </author>
+
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -15,8 +16,18 @@
     <allow-intent href="geo:*" />
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
+
+    <!-- Icon configuration -->
     <platform name="android">
+        <icon src="resources/icons/android/icon-36x36.png" density="ldpi" />
+        <icon src="resources/icons/android/icon-48x48.png" density="mdpi" />
+        <icon src="resources/icons/android/icon-72x72.png" density="hdpi" />
+        <icon src="resources/icons/android/icon-96x96.png" density="xhdpi" />
+        <icon src="resources/icons/android/icon-144x144.png" density="xxhdpi" />
+        <icon src="resources/icons/android/icon-192x192.png" density="xxxhdpi" />
+            <icon src="resources/icons/android/icon-192x192.png" />
     </platform>
+
     <plugin name="cordova-plugin-geolocation" source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" />
     <plugin name="cordova-plugin-file" source="npm" />
