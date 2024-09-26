@@ -15,12 +15,21 @@
         body {
             background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1; /* Make the content take up all available space */
+        }
+        footer {
+            background-color: orange;
         }
     </style>
 </head>
 
 <body class="bg-gray-900 text-white font-[sans-serif]">
-    <div class="min-h-screen flex flex-col items-center justify-center py-6 px-4">
+    <div class="content flex flex-col items-center justify-center py-6 px-4">
         <div class="max-w-md w-full">
             <a href="javascript:void(0)">
                 <img src="./img/alert.png" alt="logo" class="w-40 mb-8 mx-auto block" />
@@ -39,19 +48,19 @@
                 <h2 class="text-center text-2xl font-bold">Sign Up</h2>
                 <form class="mt-8 space-y-4" id="signup-form" action="./your-action-url" method="POST">
                     <div>
-                        <label class="text-white text-sm mb-2 block" for="email" class="label">Email</label>
+                        <label class="text-white text-sm mb-2 block" for="email">Email</label>
                         <div class="relative flex items-center">
-                            <input name="email"  required 
-                            title="email" type="email"  id="regEmail" 
+                            <input name="email" required 
+                            title="email" type="email" id="regEmail" 
                             class="w-full text-white text-sm border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Enter email address" />
                         </div>
                     </div>
             
                     <div>
-                        <label class="text-white text-sm mb-2 block" for="Password" class="label">Password</label>
+                        <label class="text-white text-sm mb-2 block" for="Password">Password</label>
                         <div class="relative flex items-center">
                             <input name="password" type="password" required
-                            title="email" id="regPassword" placeholder="8-10 characters"  
+                            title="password" id="regPassword" placeholder="8-10 characters"  
                              class="w-full text-white text-sm border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"/>
                         </div>
                     </div>
@@ -65,12 +74,18 @@
                         </button>
                     </div>
             
-                    <p class="text-white text-sm !mt-8 text-center">Already have an account? <a id="signaccount" href="./index.html" class="text-red-400 hover:underline transition duration-300 ml-1 whitespace-nowrap font-semibold">Sign in here</a></p>
+                    <p class="text-white text-sm !mt-8 text-center">Already have an account? <a id="signaccount" href="./signin.html" class="text-red-400 hover:underline transition duration-300 ml-1 whitespace-nowrap font-semibold">Sign in here</a></p>
                 </form>
             </div>
-            
         </div>
     </div>
+
+    <footer class="w-full text-black py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; EreyomiF. All rights reserved.</p>
+        </div>
+    </footer>
+    
     <script src="./js/signup.js"></script>
 </body>
 </html>
