@@ -15,27 +15,57 @@
   </head>
 <body>
     <div>
-      <nav class="navbar">
-        <div class="brandlogo flex items-center">
-          <img src="./img/alert.png" alt="AlertNOW Logo" class="h-8 w-12 mr-2">
-          <span class="text-lg">AlertNOW</span>
-      </div>
-        <div class="sec">
-            <div class="notify"><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 0c-17.7 0-32 14.3-32 32l0 19.2C119 66 64 130.6 64 208l0 25.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416l400 0c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4l0-25.4c0-77.4-55-142-128-156.8L256 32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112l0 25.4c0 47.9 13.9 94.6 39.7 134.6L72.3 368C98.1 328 112 281.3 112 233.4l0-25.4c0-61.9 50.1-112 112-112zm64 352l-64 0-64 0c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"/></svg></div>
-          <div class="profile-imagediv">
-            <img class=" mt-1 rounded-full w-12 h-7" src="./img/profile_pic-removebg-preview.png" alt="profile-image" >
+    <!-- Navigation Bar -->
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="./img/alert.png" class="h-8" alt="Logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AlertNOW</span>
+          </a>
+          <div class="flex items-center space-x-1 rtl:space-x-reverse">
+              <!-- Notification SVG -->
+              <a href="#" class="text-gray-500 dark:text-white hover:underline">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405C17.737 14.737 17 13.369 17 12V7a5 5 0 00-10 0v5c0 1.369-.737 2.737-1.595 3.595L4 17h5m5 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                  </svg>
+              </a>
+              <!-- Plus SVG -->
+              <a href="#">
+                  <img src="./img/profile_pic-removebg-preview.png" alt="Plus Icon" class="h-6 w-8 text-gray-500 dark:text-white hover:underline" />
+              </a>
+              <!-- Logout -->
+              <a href="./index.html" class="text-sm text-blue-600 dark:text-blue-500 hover:underline">Logout</a>
           </div>
-        </div>
-      </nav>
-      <div class="secsections">
-        <div class="filtdiv">
-     <select title="filter" id="category-filter" class="filter-select ">
-        <option value="" >All Categories</option> 
-       <option value="accident">Accident</option>
-       <option value="fighting">Fighting</option>
-       <option value="crime" >Crime</option>
-     </select>
-         </div>
+      </div>
+  </nav>
+
+  <nav class="bg-gray-50 dark:bg-gray-700">
+    <div class="max-w-screen-xl px-4 py-3 mx-auto flex justify-between items-center">
+        <!-- Navigation links and filter section -->
+        <ul class="flex flex-row font-medium mt-0 space-x-4 rtl:space-x-reverse text-sm items-center">
+            <li>
+                <a href="#" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+            </li>
+            <li>
+                <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
+            </li>
+            <!-- Filter dropdown -->
+            <li class="flex items-center">
+                <select title="filter" id="category-filter" class="filter-select border border-gray-300 rounded px-2 py-1">
+                    <option value="" >All Categories</option> 
+                    <option value="accident">Accident</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="crime">Crime</option>
+                </select>
+            </li>
+        </ul>
+
+        <!-- New Report Button -->
+        <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded inline-flex items-center">
+            Contact Us
+        </button>
+    </div>
+</nav>
   
 
   
@@ -213,6 +243,6 @@
 
 
 
-  <script src="./js/home.js"></script>
+    <script src="./js/Alertapp.js"></script>
 </body>
 </html>
