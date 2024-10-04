@@ -1,29 +1,7 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-
 // Wait for the deviceready event before using any of Cordova's device APIs.
-// See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-  // Cordova is now initialized. Have fun!
-
   console.log("Running cordova-" + cordova.platformId + "@" + cordova.version);
   document.getElementById("deviceready").classList.add("ready");
 }
@@ -78,18 +56,22 @@ async function signIn(email, password) {
   }
 }
 
-// Example usage
+// Event listener for form submission
+document.querySelector("#loginForm").addEventListener("submit", (e) => {
+  e.preventDefault(); // Prevent the default form submission behavior
+  console.log("Form submitted");
 
-document.querySelector("#loginbtn").addEventListener("click", () => {
-  console.log("i got clicked");
-  let useremail = document.querySelector("#emails").value;
+  let useremail = document.querySelector("#emails").value.trim();
   useremail = useremail.toLowerCase();
-  const userpassword = document.querySelector("#passwordd").value;
+  const userpassword = document.querySelector("#passwordd").value.trim();
+
   signIn(useremail, userpassword).then((success) => {
     if (success) {
-      // Redirect to dashboard or do something on successful sign-in
+      // Handle successful login
+      console.log("Redirecting to home page...");
     } else {
-      // Show error message or take other actions on failure
+      // Handle login failure
+      console.log("Login failed.");
     }
   });
 });
